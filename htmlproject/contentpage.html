@@ -1,0 +1,532 @@
+<html>
+
+<head>
+    <title>
+        Epic Stuff - Anime Collection
+    </title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .header {
+            background-color: #111;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 10px;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .header .menu {
+            font-size: 18px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .header .menu a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header .menu a:hover {
+            color: #e60000;
+        }
+
+        .searchbox {
+            flex: 0 0 200px;
+            display: flex;
+            align-items: center;
+            background-color: #222;
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .searchbox input {
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .searchbox button {
+            background-color: #222;
+            color: #4b78b7;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .searchbox button:hover {
+            background-color: #333;
+        }
+
+        .hero-image {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .filters select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .product {
+            background-color: #222;
+            border: 1px solid #333;
+            border-radius: 10px;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        .product .title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .product .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4b78b7;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .categories h1 {
+            background-color: grey;
+            text-align: center;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <i class="fas fa-bars">
+            </i>
+            MENU
+        </div>
+        <div class="searchbox">
+            <input type="text" placeholder="Search..." />
+        </div>
+        <div class="account" style="font-family: 'Roboto', sans-serif;">
+            Login/Signup
+        </div>
+    </div>
+    <img alt="One Piece" class="hero-image" height="400" src="onepiece.jpeg" width="1200" />
+    <div class="content">
+        <h1>
+            &nbsp; &nbsp;
+        </h1>
+        <p>
+
+            Discover India's first exclusive store for anime merchandise! From collectibles to posters, find all your
+            favorite anime accessories in one place. Shop now for a wide variety of items inspired by top anime shows
+            and movies.
+        </p>
+    </div>
+    <div class="filters">
+        <div class="filter-by">
+            <label for="filter">
+                FILTER BY
+            </label>
+            <select id="filter">
+                <option value="price-low-to-high">
+                    Price (Low to High)
+                </option>
+                <option value="price-high-to-low">
+                    Price (High to Low)
+                </option>
+            </select>
+        </div>
+        <div class="sort-by">
+            <label for="sort">
+                SORT BY
+            </label>
+            <select id="sort">
+                <option value="new-arrivals">
+                    New Arrivals
+                </option>
+                <option value="relevance">
+                    Relevance
+                </option>
+                <option value="offer-products">
+                    Offer Products
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="categories">
+        <h1>T-shirts</h1>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img alt="Anime T-shirt" height="300" src="Gojo.jpg" width="200" />
+            <div class="title">
+                Satoru Gojo 
+            </div>
+            <div class="price">
+                ₹ 399
+            </div>
+
+        </div>
+        <div class="product">
+            <img alt="Anime T-shirt" height="300" src="levi.webp" width="200" />
+            <div class="title">
+                Levi Ackerman 
+            </div>
+            <div class="price">
+                ₹ 399
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime T-shirt" height="300" src="itachi.webp" width="200" />
+            <div class="title">
+                Itachi Uchiha 
+            </div>
+            <div class="price">
+                ₹ 750
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime T-shirt" height="300"src="toji.webp" width="200" />
+            <div class="title">
+                Zenin Toji
+            </div>
+            <div class="price">
+                ₹ 750
+            </div>
+       
+    </div>
+
+    </div>
+    <div class="categories">
+        <h1>Action Figures</h1>
+    </div>
+
+
+    <div class="products">
+        <div class="product">
+            <img alt="Anime Actionfiguers" height="300"
+                src="ace.webp"
+                width="200" />
+            <div class="title">
+                Portgas D. Ace
+            </div>
+            <div class="price">
+                ₹ 499
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Actionfiguers" height="300" width="" src="itachiaction.avif" width="200" />
+            <div class="title">
+                Itachi Uchiha
+            </div>
+            <div class="price">
+                ₹ 899
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Actionfiguers" height="300"
+                src="luffy.webp"
+                width="200" />
+            <div class="title">
+                Monkey D. Luffy
+            </div>
+            <div class="price">
+                ₹ 599
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Actionfiguers" height="300"
+                src="madara.webp"
+                width="200" />
+            <div class="title">
+                Madara Uchiha
+            </div>
+            <div class="price">
+                ₹ 699
+            </div>
+        </div>
+
+    </div>
+    <div class="categories">
+        <h1>Accessories</h1>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img alt="Anime Accessories" height="300"
+                src="kunai.jpg"
+                width="200" />
+            <div class="title">
+                Naruto Kuani
+            </div>
+            <div class="price">
+                 ₹ 199
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Accessories" height="300" width="" src="naruto baracelet.webp" width="200" />
+            <div class="title">
+                Naruto bracelet
+            </div>
+            <div class="price">
+                ₹ 199
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Accessories" height="300"
+                src="acekeychain.webp"
+                width="200" />
+            <div class="title">
+                Ace Keychain
+            </div>
+            <div class="price">
+                ₹ 750
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Accessories" height="300"
+                src="Akatsuki.jpeg"
+                width="200" />
+            <div class="title">
+                Akatsuki cap
+            </div>
+            <div class="price">
+                ₹ 250
+            </div>
+        </div>
+
+    </div>
+    <div class="categories">
+        <h1>Joggers</h1>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img alt="Anime Joggers" height="300"
+                src="luffyjog.avif"
+                width="200" />
+            <div class="title">
+                Luffy Joggers
+            </div>
+            <div class="price">
+                ₹ 499
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Joggers" height="300" width="" src="sasuke.jpg" width="200" />
+            <div class="title">
+                Sasuke Joggers
+            </div>
+            <div class="price">
+                ₹ 499
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Joggers" height="300"
+                src="dragonballz.webp"
+                width="200" />
+            <div class="title">
+                Dragon-ball Joggers
+            </div>
+            <div class="price">
+                ₹ 499
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime Joggers" height="300"
+                src="onepiecejog.webp"
+                width="200" />
+            <div class="title">
+                Onepiece Joggers
+            </div>
+            <div class="price">
+                ₹ 499
+            </div>
+        </div>
+    </div>
+    <div class="categories">
+        <h1>Posters</h1>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img alt="Anime poster" height="300"
+                src="gojopos.webp"
+                width="200" />
+            <div class="title">
+                Gojo Poster
+            </div>
+            <div class="price">
+                ₹ 299
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime poster" height="300" width="" src="zoro.jpg" width="200" />
+            <div class="title">
+                Zoro Poster
+            </div>
+            <div class="price">
+                ₹ 299
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime poster" height="300"
+                src="demonsalypos.jpg"
+                width="200" />
+            <div class="title">
+                Tanjiro Poster
+            </div>
+            <div class="price">
+                ₹ 299
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Anime poster" height="300"
+                src="itachipos.jpg"
+                width="200" />
+            <div class="title">
+                Itachi Poster
+            </div>
+            <div class="price">
+                ₹ 299
+            </div>
+        </div>
+    </div>
+    <div class="categories">
+        <h1>Mangas</h1>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img alt="Manga" height="300"
+                src="onepiece manga.jpg"
+                width="200" />
+            <div class="title">
+                One Piece
+            </div>
+            <div class="price">
+                ₹ 2999
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Manga" height="300" width="" src="naruto manga.jpg" width="200" />
+            <div class="title">
+                Naruto
+            </div>
+            <div class="price">
+                ₹ 2999
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Manga" height="300"
+                src="jjk manga.jpg"
+                width="200" />
+            <div class="title">
+                JJK
+            </div>
+            <div class="price">
+                ₹  2999
+            </div>
+        </div>
+        <div class="product">
+            <img alt="Mangar" height="300"
+                src="blreach manga.webp"
+                width="200" />
+            <div class="title">
+                Bleach
+            </div>
+            <div class="price">
+                ₹ 2999
+            </div>
+        </div>
+
+
+        <div class="footer">
+            &copy; 2024 Epic Stuff. All rights reserved.
+        </div>
+
+</body>
+
+</html>
